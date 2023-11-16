@@ -1,4 +1,4 @@
-# Pre Entrega de proyecto #1 
+# Pre Entrega de proyecto #2
 
 Esta preentrega del proyecto final para la clase de React en CoderHouse de la comisión 58400
 

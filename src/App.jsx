@@ -4,6 +4,7 @@ import Cart from "./components/Cart";
 import About from "./components/About";
 import ItemListContainer from "./components/Item/ItemListContainer";
 import ItemDetail from "./components/ItemDetail/ItemDetail";
+import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 
 export const App = () => {
   return (
@@ -14,7 +15,7 @@ export const App = () => {
           <Route exact path="/" element={<ItemListContainer />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/about" element={<About />} />
-          <Route exact path="/detailitem" element={<ItemDetail />} />
+          <Route exact path="/producto/:id" element={<ItemDetailContainer />} />
         </Routes>
       
       </BrowserRouter>
