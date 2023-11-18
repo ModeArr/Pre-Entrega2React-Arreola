@@ -13,7 +13,6 @@ export const App = () => {
         <Routes>
           <Route exact path="/" element={<ItemListContainer />} />
           <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/about" element={<About />} />
           <Route exact path="/producto/:id" element={<ItemDetailContainer />} />
           <Route exact path="/categoria/:category" element={<ItemListContainer />} />
         </Routes>
