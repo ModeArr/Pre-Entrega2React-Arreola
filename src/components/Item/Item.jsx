@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom"
 
-const Item = ({title, image, price, rating , categoria}) => {
+const Item = ({id, title, image, price, rating , categoria}) => {
   return (
 <article className="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
-      <a href="#">
+      <Link to={`/producto/${id}`}>
         <div className="relative flex items-end overflow-hidden rounded-xl">
           <img className="h-48 w-full object-contain" src={image} alt={title} />
           <div className="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
@@ -27,7 +28,7 @@ const Item = ({title, image, price, rating , categoria}) => {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </article>
   )
 }

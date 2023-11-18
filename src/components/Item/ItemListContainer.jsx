@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
+import {getProductos, getCategoria} from "../helpers/GetProducts.js"
+import { useParams } from "react-router-dom"
 
 function ItemListContainer() {
-  const getProductos = async() => {
-    const response = await fetch("https://fakestoreapi.com/products")
-    const data = await response.json()
-
-    return data;
-  }
-  
+  const { category } = useParams()
   const [products, setProducts] = useState([])
 
-  useEffect(() => {
-    getProductos().then((product) => setProducts(product))
-  }, []) 
+  useEffect(() => { 
+    category ?
+     getCategoria(category).then((category) => setProducts(category))
+     : getProductos().then((product) => setProducts(product))
+  }, [category]) 
+
   return (
   <section className="py-10 bg-gray-100">
       <ItemList products={products}/>

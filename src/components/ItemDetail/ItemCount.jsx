@@ -9,7 +9,7 @@ const ItemCount = () => {
 
     return(
         <div className="mt-4 im space-y-3 sm:space-y-6 sm:mt-0 sm:block">
-            <div className="flex items-center border-gray-100 justify-center">
+            <div className="flex items-center border-gray-100 max-md:justify-center">
                 <span className="cursor-pointer rounded-l bg-gray-100 py-3 px-9 duration-100 hover:bg-blue-500 hover:text-blue-50" onClick={() => contador > 1 ? setContador(contador - 1) : console.log("No puedes tener articulos negativos")}>-</span>
                 <input value={contador} max={5} type="number" className="h-12 w-24 border bg-white text-center text-xs outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
                 <span className="cursor-pointer rounded-r bg-gray-100 py-3 px-9 duration-100 hover:bg-blue-500 hover:text-blue-50" onClick={() => setContador(contador + 1)}>+</span>

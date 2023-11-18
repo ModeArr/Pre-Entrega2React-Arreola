@@ -1,13 +1,19 @@
-import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
 import ItemDetail from "./ItemDetail"
+import {getProductByID} from "../helpers/GetProducts.js"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
-    const { id } = useParams()
 
-    products.find((p) => p.id === id)
+  const [product, setProducts] = useState([])
+  const { id } = useParams()
+
+  useEffect(() => {
+    getProductByID(parseInt(id)).then((product) => setProducts(product))
+  }, [id]) 
   return (
     <div>
-        <ItemDetail />
+        <ItemDetail product={product}/>
     </div>
   )
 }

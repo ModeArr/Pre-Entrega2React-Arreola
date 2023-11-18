@@ -3,7 +3,6 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cart from "./components/Cart";
 import About from "./components/About";
 import ItemListContainer from "./components/Item/ItemListContainer";
-import ItemDetail from "./components/ItemDetail/ItemDetail";
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 
 export const App = () => {
@@ -16,6 +15,7 @@ export const App = () => {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/producto/:id" element={<ItemDetailContainer />} />
+          <Route exact path="/categoria/:category" element={<ItemListContainer />} />
         </Routes>
       
       </BrowserRouter>
