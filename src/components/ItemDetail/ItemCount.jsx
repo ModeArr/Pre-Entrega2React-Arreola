@@ -14,7 +14,7 @@ const ItemCount = () => {
                 <input value={contador} max={5} type="number" className="h-12 w-24 border bg-white text-center text-xs outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
                 <span className="cursor-pointer rounded-r bg-gray-100 py-3 px-9 duration-100 hover:bg-blue-500 hover:text-blue-50" onClick={() => setContador(contador + 1)}>+</span>
             </div>
-            <div className="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-4 text-white duration-100 hover:bg-blue-600 justify-center">
+            <div className="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-4 text-white cursor-pointer hover:bg-blue-600 justify-center hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150">
                     <ion-icon name="cart" size="large"></ion-icon>
                     <button className="text-xl" onClick={addToCart}> Agregar al carrito</button>
             </div>
